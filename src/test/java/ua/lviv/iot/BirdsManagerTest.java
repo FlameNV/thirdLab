@@ -26,6 +26,6 @@ class BirdsManagerTest extends BaseBirdsManagerTest {
 	public void testFindByAbleToMigrate() {
 		foundSwans = birdsManager.findByAbleToMigrate(AbleToMigrate.YES);
 
-		assertEquals(1, foundSwans.size());
+		assertEquals(3, foundSwans.size());
 	}
 }
