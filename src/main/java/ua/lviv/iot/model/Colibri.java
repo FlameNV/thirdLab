@@ -29,4 +29,13 @@ public class Colibri extends AbstractBirds {
 		this.wingFlapSpeedInSweepsPerSecond = wingFlapSpeedInSweepsPerSecond;
 	}
 
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + "wingFlapSpeedInSweepsPerSecond, ";
+	}
+	
+	@Override
+	public String toCSV() {
+		return super.toCSV() + ", " + getWingFlapSpeedInSweepsPerSecond();
+	}
 }
