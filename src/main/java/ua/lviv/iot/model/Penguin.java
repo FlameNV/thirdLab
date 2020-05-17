@@ -29,4 +29,14 @@ public class Penguin extends AbstractBirds {
 		this.submarineSpeedInMetersPerSecond = submarineSpeedInMetersPerSecond;
 	}
 
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + "submarineSpeedInMetersPerSecond, ";
+	}
+	
+	@Override
+	public String toCSV() {
+		return super.toCSV() + ", " + getSubmarineSpeedInMetersPerSecond();
+	}
+	
 }

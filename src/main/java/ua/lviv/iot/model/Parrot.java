@@ -28,4 +28,14 @@ public class Parrot extends AbstractBirds {
 		this.canSpeak = canSpeak;
 	}
 
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + "canSpeak, ";
+	}
+	
+	@Override
+	public String toCSV() {
+		return super.toCSV() + ", " + isCanSpeak();
+	}
+	
 }
