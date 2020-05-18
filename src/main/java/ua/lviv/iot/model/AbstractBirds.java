@@ -91,4 +91,19 @@ public abstract class AbstractBirds {
 		this.family = family;
 	}
 
+	public String getHeaders() {
+		return "ableToMigrate, weightInGrams, foodPerDayInGrams, " +
+				"sex, lenghtInCentimeters, widthInCentimeters, " +
+				"heightInCentimeters, family";}
+	
+	public String toCSV() {
+		return getAbleToMigrate() + ", "
+				+ getWeightInGrams() + ", "
+				+ getFoodPerDayInGrams() + ", "
+				+ getSex() + ", "
+				+ getLenghtInCentimeters() + ", "
+				+ getWidthInCentimeters() + ", "
+				+ getHeightInCentimeters() + ", "
+				+ getFamily() + ", ";
+		}
 }

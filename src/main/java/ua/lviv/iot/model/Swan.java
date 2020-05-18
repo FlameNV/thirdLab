@@ -27,4 +27,14 @@ public class Swan extends AbstractBirds {
 		this.neckLenghtInMeters = neckLenghtInMeters;
 	}
 
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + "neckLenghtInMeters, ";
+	}
+	
+	@Override
+	public String toCSV() {
+		return super.toCSV() + ", " + getNeckLenghtInMeters();
+	}
+	
 }

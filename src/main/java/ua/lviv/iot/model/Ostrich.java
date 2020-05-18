@@ -29,4 +29,14 @@ public class Ostrich extends AbstractBirds {
 		this.legSpanInMeters = legSpanInMeters;
 	}
 
+	@Override
+	public String getHeaders() {
+		return super.getHeaders() + "legSpanInMeters, ";
+	}
+	
+	@Override
+	public String toCSV() {
+		return super.toCSV() + ", " + getLegSpanInMeters();
+	}
+	
 }
